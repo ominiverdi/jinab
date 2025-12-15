@@ -1,0 +1,12 @@
+[package]
+name = "jinab"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool to read and search the web using Jina AI's Reader API"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+clap_complete = "4"
+reqwest = { version = "0.11", features = ["blocking"] }
+dirs = "5"
