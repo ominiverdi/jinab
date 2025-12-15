@@ -78,12 +78,20 @@ Async in depth | Tokio
 
 ## Shell Completions
 
-Generate completions for your shell:
+Enable tab completion for commands and options.
+
+### Bash
 
 ```bash
-# Bash
+mkdir -p ~/.local/share/bash-completion/completions
 jinab completions bash > ~/.local/share/bash-completion/completions/jinab
+```
 
+Restart your shell or run `source ~/.local/share/bash-completion/completions/jinab`.
+
+### Other shells
+
+```bash
 # Zsh
 jinab completions zsh > ~/.zfunc/_jinab
 
