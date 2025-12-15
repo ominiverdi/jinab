@@ -57,6 +57,25 @@ jinab read https://docs.rs/tokio | grep "runtime"
 jinab search "rust error handling" | head -50
 ```
 
+### Google-style search results with jq
+
+```bash
+jinab search "rust async programming" --json | jq -r '
+  .data[] | select(.title != "") | 
+  "\(.title[0:70])\n  \(.url)\n  \(.content[0:100])...\n"'
+```
+
+Output:
+```
+Introduction - Asynchronous Programming in Rust
+  https://rust-lang.github.io/async-book/
+  NOTE: this guide is currently undergoing a rewrite after a long time without...
+
+Async in depth | Tokio
+  https://tokio.rs/tokio/tutorial/async
+  Tokio is a runtime for writing reliable asynchronous applications with Rust...
+```
+
 ## Shell Completions
 
 Generate completions for your shell:
